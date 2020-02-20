@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, View, Text } from 'react-native';
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Hello Login</Text>
+      <Text>Login</Text>
+      <Button
+        title="Ir para splash"
+        onPress={() => navigation.navigate('Splash')}
+      />
+      <Button
+        title="Ir para home"
+        onPress={() => navigation.navigate('Home')}
+      />    
     </View>
   );
 }

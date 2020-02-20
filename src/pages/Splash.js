@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Button, Text } from 'react-native';
 
-export default function Splash() {
+export default function Splash({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text>Hello Splash</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Splash</Text>
+      <Button
+        title="Ir para login"
+        onPress={() => navigation.navigate('Login')}
+      />
+      <Button
+        title="Ir para home"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   );
 }
