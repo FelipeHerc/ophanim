@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Routes from './src/routes';
 
-export default function App() {
+export default function Home() {
   return (
-    <Routes/>
+    <View style={styles.container}>
+      <Text>Hello Home</Text>
+    </View>
   );
 }
 
