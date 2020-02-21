@@ -13,6 +13,7 @@ export default function Splash({ navigation }) {
       <View>
         <Button
           title="LOGIN"
+          onPress={() => navigation.navigate('Login')}
         />
         <Text style={styles.forgotPassword}
           onPress={() => Linking.openURL('http://google.com')}>
