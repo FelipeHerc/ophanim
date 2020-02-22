@@ -27,7 +27,7 @@ export default function Login({ navigation }) {
             secureTextEntry
           />
         </View>
-        <Button title="LOGIN" style={styles.button}/>
+        <Button title="LOGIN" style={styles.button} onPress={() => navigation.navigate('Home')}/>
       </View>
     </View>
   );
