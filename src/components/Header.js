@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, Button } from 'react-native';
+import { View, StyleSheet, Image, Button } from 'react-native';
 import Logo from '../../assets/blackLogo.png'
 import colors from '../styles/colors';
 
