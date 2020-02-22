@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color: 'white', 
     margin: 25,
+    fontFamily: 'hyundaiLight'
   }
 });
