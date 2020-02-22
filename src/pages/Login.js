@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.blue,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
   },
   font: {
     fontSize: Fonts.huge,
-    fontWeight: 'bold',
     fontFamily: 'hyundaiBold',
     color: Colors.white,
+    letterSpacing: 3
   },
   input: {
     height: 40, 
