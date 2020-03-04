@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Button, View, Text } from 'react-native';
 import Header from '../components/Header';
 import colors from '../styles/colors';
-import { Ionicons } from '@expo/vector-icons';
 import MenuCard from '../components/MenuCard';
 
 export default function Home({ navigation }) {
@@ -38,8 +37,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   menuCards: {
+    marginVertical: 40,
     flex: 1,
     flexDirection: 'column',
-    padding: 40
+    padding: 40,
   }
 });

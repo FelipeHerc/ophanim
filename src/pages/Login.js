@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, Button, View, Text, TextInput } from 'react-native';
+import { StyleSheet, Button, View, Image, TextInput, Text } from 'react-native';
 import Colors from '../styles/colors';
 import Fonts from '../styles/fonts';
+import JTPLogo from '../../assets/jtp.png';
 
 export default function Login({ navigation }) {
 
@@ -10,7 +11,13 @@ export default function Login({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.font}>JTP Transportes</Text>
+      <View style={{alignItems: 'center'}}>
+        <Image
+          style={styles.JTPLogo}
+          source={JTPLogo}
+        />
+        <Text style={styles.font}>JTP Transportes</Text>
+      </View>
       <View>
         <View style={styles.inputBox}>
           <TextInput
@@ -27,7 +34,9 @@ export default function Login({ navigation }) {
             secureTextEntry
           />
         </View>
-        <Button title="LOGIN" style={styles.button} onPress={() => navigation.navigate('Home')}/>
+        <View style={styles.buttonBox}>
+          <Button title="LOGIN" style={styles.button} onPress={() => navigation.navigate('Home')}/>
+        </View>
       </View>
     </View>
   );
@@ -51,7 +60,7 @@ const styles = StyleSheet.create({
     borderColor: 'white', 
     borderWidth: 1, 
     backgroundColor: 'white', 
-    width: 200, 
+    width: 260, 
     padding: 5, 
     margin: 5,
     fontFamily: 'ubuntuRegular'
@@ -61,5 +70,13 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     margin: 10
-  }
+  },
+  buttonBox: {
+    marginHorizontal: 80
+  },
+  JTPLogo: {
+    alignItems: 'center',
+    width: 277,
+    height: 251,
+  },
 });

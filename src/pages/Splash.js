@@ -16,7 +16,11 @@ export default function Splash({ navigation }) {
           onPress={() => navigation.navigate('Login')}
         />
         <Text style={styles.forgotPassword}
-          onPress={() => Linking.openURL('http://google.com')}>
+          onPress={() => Linking.openURL('http://portal.jtptransportes.com.br')}>
+            Primeiro acesso? Clique aqui
+        </Text>
+        <Text style={styles.forgotPassword}
+          onPress={() => Linking.openURL('http://portal.jtptransportes.com.br')}>
             Esqueceu sua senha?
         </Text>
       </View>
@@ -39,6 +43,7 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color: 'white', 
     margin: 25,
-    fontFamily: 'hyundaiLight'
-  }
+    fontFamily: 'hyundaiLight',
+    textAlign: 'center',
+  },
 });
