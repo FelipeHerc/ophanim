@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './pages/Splash';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Alert from './pages/Alert'
 import { AdMobBanner} from 'expo-ads-admob';
 import StatusBar from './components/statusBar';
 
@@ -17,6 +18,7 @@ function Routes() {
           <Stack.Screen name="Splash" component={Splash} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Alert" component={Alert} />
         </Stack.Navigator>
         <AdMobBanner bannerSize="banner"/>
       </NavigationContainer>

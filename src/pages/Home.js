@@ -3,6 +3,7 @@ import { StyleSheet, Button, View, Text } from 'react-native';
 import Header from '../components/Header';
 import colors from '../styles/colors';
 import MenuCard from '../components/MenuCard';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
 export default function Home({ navigation }) {
   return (
@@ -15,7 +16,16 @@ export default function Home({ navigation }) {
           </View>
           <View style={styles.row}>
             <MenuCard label='Checklist' variant='Feather' icon='check-square'/>
-            <MenuCard label='Alerta' variant='Foundation' icon='alert'/>
+            <TouchableHighlight 
+              underlayColor={colors.darkBlue} 
+              onPress={() => navigation.navigate('Alert')}
+            >
+              <MenuCard 
+                label='Alerta' 
+                variant='Foundation' 
+                icon='alert'
+              />
+            </TouchableHighlight>
           </View>
           <View style={styles.row}>
             <MenuCard label='Compras' variant='Entypo' icon='shop'/>
