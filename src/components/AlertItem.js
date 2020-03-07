@@ -5,18 +5,17 @@ import colors from '../styles/colors';
 export default function AlertItem({date, vehicle, acepta}) {
   return(
     <View style={styles.card}>
-      <View style={styles.row}>
-        <View style={styles.textRow}>
+      <View style={styles.cardContent}>
+        <View style={styles.row}>
           <Text style={styles.titleText}>Data: </Text>
-          <Text style={styles.itemText}>{date}</Text>
-        </View>
-        <View style={styles.textRow}>
+          <Text style={styles.itemText}>{date}      </Text>
           <Text style={styles.titleText}>Acepta: </Text>
           <Text style={styles.itemText}>{acepta}</Text>
         </View>
-      </View>
-      <View style={styles.row}>
-        <Text>{vehicle}</Text>
+        <View style={styles.row}>
+          <Text style={styles.titleText}>Veículo: </Text>
+          <Text style={styles.itemText}>{vehicle}</Text>
+        </View>
       </View>
     </View>
   )
@@ -25,7 +24,8 @@ export default function AlertItem({date, vehicle, acepta}) {
 const styles = StyleSheet.create({
   card: {
   marginHorizontal: 7,
-  padding: 5,
+  paddingVertical: 7,
+  paddingLeft: 10,
   height: 70,
   marginBottom: 7,
   backgroundColor: colors.lightBlue,
@@ -33,13 +33,10 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
   },
-  textRow: {
-    flexDirection: 'row',
-
-    alignSelf: 'flex-start'
-
+  cardContent: {
+    flex: 1,
+    justifyContent: 'space-around'
   },
   titleText: {
     fontFamily: 'ubuntuBold',

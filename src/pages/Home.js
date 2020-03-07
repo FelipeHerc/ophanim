@@ -21,7 +21,7 @@ export default function Home({ navigation }) {
               onPress={() => navigation.navigate('Alert')}
             >
               <MenuCard 
-                label='Alerta' 
+                label='Alertas' 
                 variant='Foundation' 
                 icon='alert'
               />

@@ -14,7 +14,8 @@ export default function Alert() {
           {
             alertMock.alerts.map(
               (alert) => (
-                <AlertItem 
+                <AlertItem
+                  key={alert.id}
                   date={alert.date} 
                   vehicle={alert.vehicle} 
                   acepta={alert.acepta}
@@ -22,7 +23,6 @@ export default function Alert() {
               )
             )
           }  
-          
         </ScrollView>
       </View>
     </View>
@@ -36,5 +36,6 @@ const styles = StyleSheet.create({
   },
   viewArea:{
     paddingTop: 15,
+    paddingBottom: 50
   }
 })
