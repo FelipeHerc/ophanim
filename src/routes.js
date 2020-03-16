@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Splash from './pages/Splash';
+import FirstPage from './pages/FirstPage';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Alert from './pages/Alert'
@@ -14,13 +14,13 @@ function Routes() {
   return (
       <NavigationContainer>
         <StatusBar/>
-        <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
-          <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Navigator initialRouteName="FirstPage" screenOptions={{headerShown: false}}>
+          <Stack.Screen name="FirstPage" component={FirstPage} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Alert" component={Alert} />
         </Stack.Navigator>
-        <AdMobBanner bannerSize="banner"/>
+        {/* <AdMobBanner bannerSize="banner"/> */}
       </NavigationContainer>
   );
 }

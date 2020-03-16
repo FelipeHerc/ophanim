@@ -16,7 +16,6 @@ export default function Login({ navigation }) {
           style={styles.JTPLogo}
           source={JTPLogo}
         />
-        <Text style={styles.font}>JTP Transportes</Text>
       </View>
       <View>
         <View style={styles.inputBox}>
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.blue,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
   },
   font: {
     fontSize: Fonts.huge,
@@ -72,11 +71,13 @@ const styles = StyleSheet.create({
     margin: 10
   },
   buttonBox: {
-    marginHorizontal: 80
+    marginHorizontal: 80,
+    marginBottom: 50
   },
   JTPLogo: {
     alignItems: 'center',
-    width: 277,
-    height: 251,
+    width: 221,
+    height: 200,
+    marginBottom: 100
   },
 });
