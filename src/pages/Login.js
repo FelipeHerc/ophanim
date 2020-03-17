@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     borderWidth: 1, 
     backgroundColor: Colors.blue, 
     width: 260, 
-    padding: 7, 
+    padding: 10, 
     margin: 5,
     fontFamily: 'ubuntuRegular',
     color: 'white'
