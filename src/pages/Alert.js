@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue,
   },
   viewArea:{
-    paddingTop: 15,
+    paddingTop: 7,
     paddingBottom: 50
   }
 })

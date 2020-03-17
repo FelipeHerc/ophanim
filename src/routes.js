@@ -20,7 +20,7 @@ function Routes() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Alert" component={Alert} />
         </Stack.Navigator>
-        {/* <AdMobBanner bannerSize="banner"/> */}
+        <AdMobBanner bannerSize="banner"/>
       </NavigationContainer>
   );
 }
