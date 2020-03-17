@@ -22,7 +22,7 @@ export default function FirstPage({ navigation }) {
             gradientDirection="vertical"
             height={40}
             width={250}
-            radius={15}
+            radius={20}
             impact
             impactStyle='Light'
             onPressAction={() => navigation.navigate('Login')}

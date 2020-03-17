@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image, Button } from 'react-native';
-import Logo from '../../assets/blackLogo.png'
+import Logo from '../../assets/jtp.png'
 import colors from '../styles/colors';
 
 export default function Header() {
@@ -26,18 +26,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    backgroundColor: colors.blue,
+    backgroundColor: colors.deepBlue,
     width: '100%',
     padding: 5,
   },
   image: {
     justifyContent: 'center',
-    width: 155,
+    width: 90,
     height: 40,
     marginLeft: 10,
   },
   button: {
     marginRight: 10,
     width: '20%',
+    fontWeight: 'bold'
   }
 });

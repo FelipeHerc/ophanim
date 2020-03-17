@@ -3,6 +3,7 @@ import { StyleSheet, Button, View, Image, TextInput, Text } from 'react-native';
 import Colors from '../styles/colors';
 import Fonts from '../styles/fonts';
 import JTPLogo from '../../assets/jtp.png';
+import GradientButton from 'react-native-gradient-buttons';
 
 export default function Login({ navigation }) {
 
@@ -17,26 +18,34 @@ export default function Login({ navigation }) {
           source={JTPLogo}
         />
       </View>
-      <View>
-        <View style={styles.inputBox}>
-          <TextInput
-            style={styles.input}
-            placeholder="nome@example.com"
-            value={email}
-            onChangeText={email => onChangeEmail(email)}
-          />
-          <TextInput
-            style={styles.input}
-            placeholder="password"
-            value={password}
-            onChangeText={password => onChangePassword(password)}
-            secureTextEntry
-          />
-        </View>
-        <View style={styles.buttonBox}>
-          <Button title="LOGIN" style={styles.button} onPress={() => navigation.navigate('Home')}/>
-        </View>
+      <View style={styles.inputBox}>
+        <TextInput
+          style={styles.input}
+          placeholder="nome@example.com"
+          value={email}
+          onChangeText={email => onChangeEmail(email)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="password"
+          value={password}
+          onChangeText={password => onChangePassword(password)}
+          secureTextEntry
+        />
       </View>
+      <GradientButton
+        text="LOGIN"
+        textStyle={{ fontSize: 14 }}
+        gradientBegin={Colors.green}
+        gradientEnd={Colors.lightGreen}
+        gradientDirection="vertical"
+        height={40}
+        width={250}
+        radius={20}
+        impact
+        impactStyle='Light'
+        onPressAction={() => navigation.navigate('Home')}
+      />        
     </View>
   );
 }
@@ -55,24 +64,27 @@ const styles = StyleSheet.create({
     letterSpacing: 3
   },
   input: {
-    height: 40, 
+    height: 40,
+    borderRadius: 20, 
     borderColor: 'white', 
     borderWidth: 1, 
-    backgroundColor: 'white', 
+    backgroundColor: Colors.blue, 
     width: 260, 
-    padding: 5, 
+    padding: 7, 
     margin: 5,
-    fontFamily: 'ubuntuRegular'
+    fontFamily: 'ubuntuRegular',
+    color: 'white'
   },
   button: {
     padding: 50  
   },
   inputBox: {
-    margin: 10
+    margin: 10,
+    marginBottom: 50
   },
   buttonBox: {
-    marginHorizontal: 80,
-    marginBottom: 50
+    marginBottom: 50,
+    alignContent: 'center'
   },
   JTPLogo: {
     alignItems: 'center',
