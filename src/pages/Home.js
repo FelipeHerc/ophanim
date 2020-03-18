@@ -2,8 +2,13 @@ import React from 'react';
 import { StyleSheet, Button, View, Text } from 'react-native';
 import Header from '../components/Header';
 import colors from '../styles/colors';
-import MenuCard from '../components/MenuCard';
 import { TouchableHighlight } from 'react-native-gesture-handler';
+import Route from '../components/MenuIcons/Route';
+import Students from '../components/MenuIcons/Students';
+import Checklist from '../components/MenuIcons/Checklist';
+import Alert from '../components/MenuIcons/Alert';
+import Shop from '../components/MenuIcons/Shop';
+import Comunication from '../components/MenuIcons/Comunication';
 
 export default function Home({ navigation }) {
   return (
@@ -11,25 +16,21 @@ export default function Home({ navigation }) {
       <Header/>
         <View style={styles.menuCards}>
           <View style={styles.row}>
-            <MenuCard label='Rota' variant='FontAwesome' icon='road'/>
-            <MenuCard label='Alunos' variant='MaterialIcons' icon='school'/>
+            <Route/>
+            <Students/>
           </View>
           <View style={styles.row}>
-            <MenuCard label='Checklist' variant='Feather' icon='check-square'/>
+            <Checklist/>
             <TouchableHighlight 
-              underlayColor={colors.darkBlue} 
               onPress={() => navigation.navigate('Alert')}
-            >
-              <MenuCard 
-                label='Alertas' 
-                variant='Foundation' 
-                icon='alert'
-              />
+              style={{ borderRadius:20 }}
+              >
+              <Alert/>
             </TouchableHighlight>
           </View>
           <View style={styles.row}>
-            <MenuCard label='Compras' variant='Entypo' icon='shop'/>
-            <MenuCard label='Comunicação' variant='FontAwesome' icon='wechat'/>
+            <Shop/>
+            <Comunication/>
           </View>
       </View>
     </View>
