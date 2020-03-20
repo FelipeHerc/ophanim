@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Image, Modal, TouchableHighlight, Text, Alert } from 'react-native';
+import { View, StyleSheet, Image, Modal, TouchableHighlight, Text, Alert, Linking } from 'react-native';
 import Logo from '../../assets/jtp.png';
 import Emergency from '../../assets/police.png';
 import colors from '../styles/colors';
@@ -30,8 +30,8 @@ export default function Header() {
               style={styles.modalButton}
               underlayColor={colors.darkRed}
               onPress={() => {
-                Alert.alert('SOS enviado', 'Sua requisição de SOS foi enviada');
                 setModalVisible(!modalVisible);
+                Linking.openURL('https://api.whatsapp.com/send?phone=5511950256396&text=Ol%C3%A1%20CCO%2C%20estou%20com%20uma%20emerg%C3%AAncia%2C%20Contrato%3A%20TRANSP%20EMBU%20DAS%20ARTES%20Veiculo%3A%201.020%20Motorista%3A%20CARLOS%20RAIMONDI');
               }}>
               <Text style={styles.modalText}>Sim</Text>
             </TouchableHighlight>
@@ -53,7 +53,7 @@ export default function Header() {
         source={Logo}
       />
       <View style={styles.button}>
-        <GradientButton 
+        <GradientButton
           text="SOS"
           textStyle={{ fontSize: 14 }}
           gradientBegin={colors.red}

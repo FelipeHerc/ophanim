@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Ophanim",
-    "slug": "ophanim",
+    "name": "BMS Fleet",
+    "slug": "bmsFleet",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -27,7 +27,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.bmsdevelopment.jtptransportesdevelopment"
+      "package": "com.bmsdevelopment.bmsfleet"
     }
   }
 }
