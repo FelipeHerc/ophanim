@@ -4,7 +4,8 @@ import * as Font from 'expo-font';
 
 export default function App() {
 
-  const [isFontReady, setFontReady] = useState(false)
+  const [isFontReady, setFontReady] = useState(false);
+  
   useEffect(() => {
     async function loadFont() {
       return await Font.loadAsync({
